@@ -1,20 +1,9 @@
-﻿using System.Text;
-using System.Text.RegularExpressions;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AnomalyUIScalingCalculator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private static readonly float ScreenWidth = 1920f;
@@ -32,7 +21,7 @@ namespace AnomalyUIScalingCalculator
         {
             if (float.TryParse(XInput.Text, out float originalX) && float.TryParse(YInput.Text, out float originalY))
             {
-                var (CalculatedX, CalculatedY) = CalculateNew(originalX, originalY);
+                var (CalculatedX, CalculatedY) = Calculate(originalX, originalY);
 
                 OutputX.Text = $"{CalculatedX:0}";
                 OutputY.Text = $"{CalculatedY:0}";
@@ -43,7 +32,7 @@ namespace AnomalyUIScalingCalculator
             }
         }
 
-        private static (float x, float y) CalculateNew(float x, float y)
+        private static (float x, float y) Calculate(float x, float y)
             => (x * OutputXScalingFactor, y * OutputYScalingFactor);
 
         private void CopySingle_Click(object sender, MouseButtonEventArgs e)
@@ -81,11 +70,9 @@ namespace AnomalyUIScalingCalculator
 
         private void InfoText_Trigger(string infoMessage)
         {
-            var textDefault = "Info -";
-
             if (!string.IsNullOrEmpty(infoMessage)) 
             {
-                InfoText.Text = $"{textDefault} {infoMessage}";
+                InfoText.Text = $"Info - {infoMessage}";
             }
         }
     }
