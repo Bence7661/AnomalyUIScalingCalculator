@@ -61,7 +61,7 @@ namespace AnomalyUIScalingCalculator
 
                 if (!string.IsNullOrEmpty(xValue) && !string.IsNullOrEmpty(yValue))
                 {
-                    string coordinates = $"x=\"{xValue}\", y=\"{yValue}\"";
+                    string coordinates = $"x=\"{xValue}\" y=\"{yValue}\"";
                     Clipboard.SetText(coordinates);
                     InfoText_Trigger($"Copied: {coordinates}");
                 }
