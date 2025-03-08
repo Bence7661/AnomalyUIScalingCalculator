@@ -23,7 +23,7 @@ Let's say I want to put this "Back" button right under the "Repair" button.
   
 ![image](https://github.com/user-attachments/assets/64d50079-836c-45f8-8b8b-bbcdd823d6c5)  
   
-Here's the relevant part from my `ui_xxx_16.xml `  
+Here's the relevant part from my `ui_xxx_16.xml`  
 ```xml
 <btn_back x="0" y="0" width="177" height="37">
   <text r="150" g="150" b="150" font="letterica16" align="c" vert_align="c">ui_mm_back</text>
