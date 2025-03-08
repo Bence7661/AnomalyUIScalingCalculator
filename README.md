@@ -10,6 +10,13 @@ I'm also making it open source so you can do whatever you want to with it.
 
 What really would be cool is to make an actual UI editor program or a VS extension so you can "_drag & drop_" stuff and with the press of a button an `.xml` is generated that is either ready to go or requires minimal adjustments.
 
+# Disclaimer
+Now since this is an unsigned `WPF .exe application` Windows Defender will treat it as a virus.  
+Use VirusTotal or look online for a trusted virus scanning site/app and check for yourself.  
+Since this is open source you don't need to download the `.exe` file. You can download the source code and just compile it yourself.  
+
+Here is the check I made: [VirusTotal check](https://www.virustotal.com/gui/file/7211c7f3b88a211906fd7d2ea36178e4ae1b903145916d2c4ed3849edea6d8bd?nocache=1)
+
 # How to use
 I'm gonna show how I do UI and how I use this calculator on a W.I.P. project of mine.  
 Let's say I want to put this "Back" button right under the "Repair" button.  
