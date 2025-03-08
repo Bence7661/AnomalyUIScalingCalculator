@@ -53,12 +53,12 @@ namespace AnomalyUIScalingCalculator
                 if (clickable.Name == nameof(XClickable) && !string.IsNullOrEmpty(OutputX.Text))
                 {
                     Clipboard.SetText(OutputX.Text);
-                    MessageBox.Show($"Copied: {OutputX.Text}", "Copied", MessageBoxButton.OK, MessageBoxImage.Information);
+                    InfoText_Trigger($"Copied: {OutputX.Text}");
                 }
                 else if (clickable.Name == nameof(YClickable) && !string.IsNullOrEmpty(OutputY.Text))
                 {
                     Clipboard.SetText(OutputY.Text);
-                    MessageBox.Show($"Copied: {OutputY.Text}", "Copied", MessageBoxButton.OK, MessageBoxImage.Information);
+                    InfoText_Trigger($"Copied: {OutputY.Text}");
                 }
             }
         }
@@ -74,8 +74,18 @@ namespace AnomalyUIScalingCalculator
                 {
                     string coordinates = $"{xValue}, {yValue}";
                     Clipboard.SetText(coordinates);
-                    MessageBox.Show($"Copied: {coordinates}", "Copied", MessageBoxButton.OK, MessageBoxImage.Information);
+                    InfoText_Trigger($"Copied: {coordinates}");
                 }
+            }
+        }
+
+        private void InfoText_Trigger(string infoMessage)
+        {
+            var textDefault = "Info -";
+
+            if (!string.IsNullOrEmpty(infoMessage)) 
+            {
+                InfoText.Text = $"{textDefault} {infoMessage}";
             }
         }
     }
