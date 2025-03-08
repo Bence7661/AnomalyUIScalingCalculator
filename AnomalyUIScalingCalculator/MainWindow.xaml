@@ -51,7 +51,7 @@
             MouseLeftButtonDown="CopySingle_Click" />
         </Grid>
 
-        <Button Content="Copy Both" Grid.Row="8" Margin="10" Click="CopyBoth_Click"/>
+        <Button Content="Copy XML Paste Ready" Grid.Row="8" Margin="10" Click="CopyXmlPasteReady_Click"/>
 
         <Border Grid.Row="9" Height="2" Background="#D3D3D3" Margin="0,10"/>
 

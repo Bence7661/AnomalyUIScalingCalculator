@@ -52,7 +52,7 @@ namespace AnomalyUIScalingCalculator
             }
         }
 
-        private void CopyBoth_Click(object sender, RoutedEventArgs e)
+        private void CopyXmlPasteReady_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
             {
@@ -61,7 +61,7 @@ namespace AnomalyUIScalingCalculator
 
                 if (!string.IsNullOrEmpty(xValue) && !string.IsNullOrEmpty(yValue))
                 {
-                    string coordinates = $"{xValue}, {yValue}";
+                    string coordinates = $"x=\"{xValue}\", y=\"{yValue}\"";
                     Clipboard.SetText(coordinates);
                     InfoText_Trigger($"Copied: {coordinates}");
                 }
