@@ -33,7 +33,7 @@ namespace AnomalyUIScalingCalculator
         }
 
         private static (float x, float y) Calculate(float x, float y)
-            => (x * OutputXScalingFactor, y * OutputYScalingFactor);
+            => ((float)Math.Round(x * OutputXScalingFactor), (float)Math.Round(y * OutputYScalingFactor));
 
         private void CopySingle_Click(object sender, MouseButtonEventArgs e)
         {
